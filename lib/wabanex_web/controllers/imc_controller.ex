@@ -7,6 +7,7 @@ defmodule WabanexWeb.IMCController do
 
   alias Wabanex.IMC
 
+  @spec index(Plug.Conn.t(), map) :: Plug.Conn.t()
   def index(conn, params) do
     params
     |> IMC.calculate()
