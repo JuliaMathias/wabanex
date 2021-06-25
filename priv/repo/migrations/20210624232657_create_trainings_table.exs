@@ -9,4 +9,5 @@ defmodule Wabanex.Repo.Migrations.CreateTrainingsTable do
 
       timestamps()
     end
+  end
 end
