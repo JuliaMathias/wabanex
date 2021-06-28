@@ -9,15 +9,17 @@ defmodule Wabanex.IMCTest do
 
       response = IMC.calculate(params)
 
-      expected_response =
-        {:ok,
-         %{
-           "Dani" => 23.437499999999996,
-           "Diego" => 23.04002019946976,
-           "Gabul" => 22.857142857142858,
-           "Rafael" => 24.897060231734173,
-           "Rodrigo" => 26.234567901234566
-         }}
+      expected_response = {
+        :ok,
+        %{
+          "Dani" => 23.437499999999996,
+          "Diego" => 23.04002019946976,
+          "Gabul" => 22.857142857142858,
+          "Rafael" => 24.897060231734173,
+          "Rodrigo" => 26.234567901234566,
+          "Julia" => 25.71100826707804
+        }
+      }
 
       assert response == expected_response
     end
@@ -27,7 +29,7 @@ defmodule Wabanex.IMCTest do
 
       response = IMC.calculate(params)
 
-      expected_response = {:error, "Error while opening the file"}
+      expected_response = {:error, "Error while opening file."}
 
       assert response == expected_response
     end
